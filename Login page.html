@@ -1,1 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .container {
+            height: 100%;
+            width: 100%;
+            background-image: url(b.png);
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+        }
+
+        .box {
+            width: 375px;
+            height: 480px;
+            background: white;
+            margin: 5% auto;
+            position: relative;
+            padding: 5px;
+        }
+
+        .button {
+            width: 225px;
+            margin: 35px auto;
+            position: relative;
+            border-radius: 35px;
+        }
+
+        .toggle {
+            padding: 10px 32px;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+            outline: none;
+            position: relative;
+        }
+
+        #btn {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 110px;
+            height: 100%;
+            background: orange;
+            border-radius: 30px;
+            transition: 1s;
+        }
+
+        .logo {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 30px;
+            margin: 0 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .form {
+            border: 0px solid;
+            top: 175px;
+            position: absolute;
+            width: 275px;
+            transition: 1s;
+        }
+
+        .form-area {
+            width: 100%;
+            padding: 10px 0;
+            margin: 5px 0;
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            border-bottom: 2px solid rgba(153, 153, 153, 0.918);
+            outline: none;
+            background: transparent;
+        }
+
+        .submit {
+            width: 85%;
+            padding: 10px 35px;
+            cursor: pointer;
+            display: block;
+            margin: auto;
+            background: orange;
+            border: 0;
+            outline: none;
+            border-radius: 25px;
+        }
+
+        .checkbox {
+            margin: 30px 5px;
+        }
+
+        span {
+            color: rgba(119, 119, 119, 0.89);
+            font-size: 12px;
+            bottom: 65px;
+            position: absolute;
+        }
+
+        #login {
+            left: 50px;
+        }
+
+        #register {
+            left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="button">
+                <div id="btn"></div>
+                <button type="button" class="toggle" onclick="login()">Login</button>
+                <button type="button" class="toggle" onclick="register()">Register</button>
+            </div>
+
+            <div class="logo">
+                <img src="facebook-262-721949.png">
+                <img src="281764.png">
+            </div>
+
+            <form class="form" id="login">
+                <input type="text" class="form-area" placeholder="Username" required>
+                <input type="password" class="form-area" placeholder="Password" required>
+
+                <input type="checkbox" class="checkbox"><span>Remember Password</span>
+                <button type="submit" class="submit">Login</button>
+            </form>
+
+            <form class="form" id="register">
+                <input type="text" class="form-area" placeholder="Username" required>
+                <input type="email" class="form-area" placeholder="Email" required>
+                <input type="password" class="form-area" placeholder="Password" required>
+
+                <input type="checkbox" class="checkbox"><span>Remember Password</span>
+                <button type="submit" class="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-500px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "500px";
+            z.style.left = "0";
+        }   
+    </script>
+</body>
+
+</html>
